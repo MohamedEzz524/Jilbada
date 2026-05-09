@@ -1456,7 +1456,7 @@ body.rtl .cinematic-quote::after {
   text-transform: uppercase;
   color: var(--green-leaf);
   opacity: 0.7;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 .collection-breadcrumb a:hover {
   color: var(--green-deep);
@@ -1744,7 +1744,7 @@ body.rtl .product-detail {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 5rem;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 @media (max-width: 900px) {
   .pdp-grid {
@@ -1753,11 +1753,13 @@ body.rtl .product-detail {
   }
 }
 .pdp-gallery {
-  position: sticky;
-  top: 130px;
   align-self: start;
   display: grid;
   gap: 0.5rem;
+  @media (min-width: 900px) {
+    position: sticky;
+    top: 130px;
+  }
 }
 .pdp-main-image {
   aspect-ratio: 3/4;
