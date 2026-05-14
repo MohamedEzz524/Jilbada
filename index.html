@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jilbada — Always Inspiring · دَوْماً مُلْهِمَة</title>
+    <link rel="stylesheet" href="https://use.typekit.net/idp1lvk.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -16,7 +17,11 @@
     <!-- LOADER -->
     <div class="loader" id="loader">
       <img class="loader-mark" src="assets/submark-cream.png" alt="" />
-      <div class="loader-text">دَوْماً مُلْهِمَة</div>
+      <img
+        class="loader-tagline"
+        src="assets/dawman molhemah2.svg"
+        alt="دَوْماً مُلْهِمَة"
+      />
     </div>
 
     <!-- DUA POPUP -->
@@ -88,15 +93,15 @@
         >
         <a class="nav-link" data-page="collection"
           ><span class="ltr-only">Muhajirat</span
-          ><span class="rtl-only">المهاجرات</span></a
+          ><span class="rtl-only">مهاجرات</span></a
         >
         <a class="nav-link locked" data-page="mathaba"
           ><span class="ltr-only">Mathaba</span
-          ><span class="rtl-only">المثابة</span></a
+          ><span class="rtl-only">مثابة</span></a
         >
         <a class="nav-link locked" data-page="mutmainna"
           ><span class="ltr-only">Mutmainna</span
-          ><span class="rtl-only">المطمئنة</span></a
+          ><span class="rtl-only">مطمئنة</span></a
         >
       </nav>
       <a data-page="home" style="cursor: pointer" aria-label="Jilbada home">
@@ -173,18 +178,41 @@
 
     <div class="mobile-overlay" id="mobileOverlay">
       <button class="close-mobile" onclick="toggleMobile()">×</button>
+
+      <img class="submark-deco" src="assets/submark-cream.png" alt="" />
+
       <a data-page="home" onclick="toggleMobile()"
         ><span class="ltr-only">Home</span
         ><span class="rtl-only">الرئيسية</span></a
       >
       <a data-page="collection" onclick="toggleMobile()"
         ><span class="ltr-only">Muhajirat</span
-        ><span class="rtl-only">المهاجرات</span></a
+        ><span class="rtl-only">مهاجرات</span></a
+      >
+      <a data-page="mathaba" onclick="toggleMobile()"
+        ><span class="ltr-only">Mathaba</span
+        ><span class="rtl-only">مثابة</span></a
+      >
+      <a data-page="mutmainna" onclick="toggleMobile()"
+        ><span class="ltr-only">Mutmainna</span
+        ><span class="rtl-only">المطمئنّة</span></a
       >
       <a data-page="about" onclick="toggleMobile()"
-        ><span class="ltr-only">Our Story</span
+        ><span class="ltr-only">Story</span
         ><span class="rtl-only">قصتنا</span></a
       >
+      <a href="#" onclick="toggleMobile()"
+        ><span class="ltr-only">Journal</span
+        ><span class="rtl-only">المدوّنة</span></a
+      >
+      <a href="#" onclick="toggleMobile()"
+        ><span class="ltr-only">Contact</span
+        ><span class="rtl-only">تواصل معنا</span></a
+      >
+      <div class="menu-tagline">
+        <img src="/assets/dawman molhemah2.svg" alt="" />
+        <span>ALWAYS INSPIRING</span>
+      </div>
     </div>
 
     <!-- ============ PAGE 1: HOME ============ -->
@@ -210,7 +238,7 @@
             <span class="rtl-only">بداية جديدة · من الأندلس</span>
           </div>
           <h1 class="hero-title">
-            <span class="ltr-only">Devised<br /><em>Modesty.</em></span>
+            <span class="ltr-only">Pristine<br />Modesty.</span>
             <span class="rtl-only">حشمةٌ<br />بلا تنازلات</span>
           </h1>
           <p class="hero-tagline">
@@ -220,8 +248,8 @@
               faith, never sacrificing grace.</span
             >
             <span class="rtl-only"
-              >حصنٌ من الحشمة، ورايةٌ من الأناقة. زيٌّ شرعيٌّ فضفاضٌ بلا تنازلات
-              على قواعد الدين، ولا على رقيّ الذوق.</span
+              >حصنٌ من الحشمة والوقار، زيٌّ شرعيٌّ فضفاضٌ بلا تنازلات على قواعد
+              الدين، ولا على رقيّ الذوق.</span
             >
           </p>
           <div class="hero-cta-row">
@@ -232,7 +260,7 @@
             >
               <span
                 ><span class="ltr-only">Discover Muhajirat</span
-                ><span class="rtl-only">اكتشفي المهاجرات</span></span
+                ><span class="rtl-only">اكتشفي مهاجرات</span></span
               >
               <span class="arrow">→</span>
             </a>
@@ -256,16 +284,21 @@
         </div>
         <div class="hero-scroll-indicator">
           <span class="ltr-only">Scroll</span>
-          <span class="rtl-only">انزلي</span>
+          <span class="rtl-only">أستكشفي</span>
           <div class="line"></div>
         </div>
       </div>
 
       <div class="tagline-strip">
         <img class="submark-deco" src="assets/submark-cream.png" alt="" />
-        <div class="ar">دَوْماً مُلْهِمَة</div>
-        <div class="en ltr-only">— Always Inspiring —</div>
-        <div class="en rtl-only">— شعارُ البراند —</div>
+        <img
+          class="tagline-ar-svg"
+          src="assets/dawman molhemah.svg"
+          alt="دَوْماً مُلْهِمَة"
+        />
+        <div class="en ltr-only">Always Inspiring</div>
+        <div class="en rtl-only">دَوْماً مُلْهِمَة</div>
+        <img class="tagline-flourish-img" src="assets/ribbon.svg" alt="" />
       </div>
 
       <section class="master-cinematic reveal" aria-label="Brand cinematic">
@@ -281,13 +314,13 @@
         <div class="section-header reveal">
           <div class="section-eyebrow">
             <span class="line"></span>
-            <span class="ltr-only">A Journey in Three Stations</span>
-            <span class="rtl-only">رحلةٌ في ثلاث محطّات</span>
+            <span class="ltr-only">A Journey in Three Stages</span>
+            <span class="rtl-only">رحلةٌ في ثلاث مراحل</span>
             <span class="line"></span>
           </div>
           <h2 class="section-title">
             <span class="ltr-only"
-              >Three chapters of a single<br /><em>spiritual ascent.</em></span
+              >Three Chapters Of a Single<br />Spiritual Ascent.</span
             >
             <span class="rtl-only">ثلاثُ مراحلَ<br />لرحلةٍ روحيّةٍ واحدة</span>
           </h2>
@@ -313,13 +346,17 @@
             <div class="stage-bg"></div>
             <div class="stage-overlay"></div>
             <div class="stage-content">
-              <div><div class="stage-number">— 01</div></div>
-              <div>
-                <div class="stage-name">
-                  <span class="ltr-only">Muhajirat</span>
-                  <span class="rtl-only">المهاجرات</span>
+              <!-- <div><div class="stage-number">— 01</div></div> -->
+              <div class="stage-content-auto">
+                <img
+                  class="stage-name-svg"
+                  src="assets/mohajeraat.svg"
+                  alt="مهاجرات"
+                />
+                <div class="stage-arabic">
+                  <span class="ltr-only">— Muhajirat —</span>
+                  <span class="rtl-only">— مهاجرات —</span>
                 </div>
-                <div class="stage-arabic ltr-only">— المهاجرات —</div>
                 <p class="stage-desc">
                   <span class="ltr-only"
                     >For every soul that hears the call. The first brave step
@@ -334,6 +371,13 @@
                   <span class="status-dot"></span>
                   <span class="ltr-only">Now Available</span>
                   <span class="rtl-only">متوفّرة الآن</span>
+                  <span class="status-dot"></span>
+                </div>
+                <div class="stage-verse">
+                  <div class="faded">
+                    «وَأَنِيبُوا إِلَىٰ رَبِّكُمْ»
+                    <div class="stage-verse-source">— الزمر ٥٤ —</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -348,13 +392,17 @@
             <div class="stage-overlay"></div>
             <div class="stage-locked-icon">◊</div>
             <div class="stage-content">
-              <div><div class="stage-number">— 02</div></div>
-              <div>
-                <div class="stage-name">
-                  <span class="ltr-only">Mathaba</span>
-                  <span class="rtl-only">المثابة</span>
+              <!-- <div><div class="stage-number">— 02</div></div> -->
+              <div class="stage-content-auto">
+                <img
+                  class="stage-name-svg"
+                  src="assets/mathaba.svg"
+                  alt="مثابة"
+                />
+                <div class="stage-arabic">
+                  <span class="ltr-only">— Mathaba —</span>
+                  <span class="rtl-only">— مثابة —</span>
                 </div>
-                <div class="stage-arabic ltr-only">— المثابة —</div>
                 <p class="stage-desc">
                   <span class="ltr-only"
                     >The sanctuary to which you return. Where commitment becomes
@@ -366,9 +414,10 @@
                   >
                 </p>
                 <div class="stage-status">
-                  <span class="status-dot locked"></span>
+                  <span class="status-dot"></span>
                   <span class="ltr-only">Awaits its hour</span>
                   <span class="rtl-only">في انتظار وقتها</span>
+                  <span class="status-dot"></span>
                 </div>
                 <div class="stage-verse">
                   «وَأَنِيبُوا إِلَىٰ رَبِّكُمْ»
@@ -387,13 +436,17 @@
             <div class="stage-overlay"></div>
             <div class="stage-locked-icon">◊</div>
             <div class="stage-content">
-              <div><div class="stage-number">— 03</div></div>
-              <div>
-                <div class="stage-name">
-                  <span class="ltr-only">Mutmainna</span>
-                  <span class="rtl-only">المطمئنّة</span>
+              <!-- <div><div class="stage-number">— 03</div></div> -->
+              <div class="stage-content-auto">
+                <img
+                  class="stage-name-svg"
+                  src="assets/motma2en.svg"
+                  alt="المطمئنّة"
+                />
+                <div class="stage-arabic">
+                  <span class="ltr-only">— Mutmainna —</span>
+                  <span class="rtl-only">— المطمئنّة —</span>
                 </div>
-                <div class="stage-arabic ltr-only">— المطمئنّة —</div>
                 <p class="stage-desc">
                   <span class="ltr-only"
                     >The soul at peace. Where outer modesty and inner light
@@ -405,9 +458,10 @@
                   >
                 </p>
                 <div class="stage-status">
-                  <span class="status-dot locked"></span>
+                  <span class="status-dot"></span>
                   <span class="ltr-only">Awaits its hour</span>
                   <span class="rtl-only">في انتظار وقتها</span>
+                  <span class="status-dot"></span>
                 </div>
                 <div class="stage-verse">
                   «يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ»
@@ -501,15 +555,20 @@
 
       <div class="cinematic-break">
         <div class="cinematic-content">
-          <div class="cinematic-quote">
-            <span class="ltr-only"
-              >When your heart whispers, "the time has come,"<br />you have made
-              the brave decision to set forth.</span
-            >
-            <span class="rtl-only"
-              >حينَ يهمسُ القلبُ: قد آنَ الأوان،<br />تكونينَ قد اخترتِ
-              الشّجاعة.</span
-            >
+          <div class="cinematic-wrapper">
+            <img class="cinematic-logo" src="assets/submark-green.png" alt="" />
+            <div class="cinematic-quote">
+              <span class="ltr-only"
+                >When your heart whispers, <br />"the time has come,"<br />you
+                have made the brave decision<br />
+                to set forth.</span
+              >
+              <span class="rtl-only"
+                >حينَ يهمسُ القلبُ:<br />
+                قد آنَ الأوان،<br />تكونينَ قد اخترتِ الشّجاعة.</span
+              >
+            </div>
+            <img class="cinematic-ribbon" src="assets/ribbon.svg" alt="" />
           </div>
           <div class="cinematic-attribution">— Jilbada —</div>
         </div>
@@ -528,14 +587,19 @@
           <span style="margin: 0 0.5em">/</span>
           <span style="color: var(--green-deep)"
             ><span class="ltr-only">Muhajirat</span
-            ><span class="rtl-only">المهاجرات</span></span
+            ><span class="rtl-only">مهاجرات</span></span
           >
         </div>
         <h1 class="collection-name">
           <span class="ltr-only">Muhajirat</span>
-          <span class="rtl-only">المهاجرات</span>
+          <span class="rtl-only">مهاجرات</span>
         </h1>
-        <div class="collection-arabic">— ٠١ المرحلة الأولى —</div>
+        <div class="collection-arabic">
+          <div class="ltr-only flex-center">
+            <span class="line"></span> Stage One <span class="line"></span>
+          </div>
+          <div class="rtl-only">— ٠١ المرحلة الأولى —</div>
+        </div>
         <p class="collection-intro">
           <span class="ltr-only"
             >For every soul that hears the call. The first step is not a
@@ -556,13 +620,26 @@
           <span class="sep">◊</span>
           <span
             ><span class="ltr-only">Slow Fashion</span
-            ><span class="rtl-only">سلو فاشن</span></span
+            ><span class="rtl-only">موضة بطيئه</span></span
           >
           <span class="sep">◊</span>
           <span
             ><span class="ltr-only">Made in Egypt</span
             ><span class="rtl-only">صُنع في مصر</span></span
           >
+        </div>
+
+        <div class="designer-credit">
+          <span class="ltr-only"
+            >Designed in Morocco &nbsp;·&nbsp;
+            <em
+              >Rabab Lourani <span class="sm">( Fashion Designer)</span></em
+            ></span
+          >
+          <span class="rtl-only"
+            >مصصم في المغرب &nbsp;·&nbsp;
+            <em>رباب لوراني <span class="sm">( مصممة الموضه )</span></em>
+          </span>
         </div>
       </div>
 
@@ -759,7 +836,7 @@
               in, dignified enough to carry into any room you enter.</span
             >
             <span class="rtl-only"
-              >كلُّ قطعةٍ من المهاجرات صُنعت لتكونَ رفيقةَ تلك الهمسة الهادئة —
+              >كلُّ قطعةٍ من مهاجرات صُنعت لتكونَ رفيقةَ تلك الهمسة الهادئة —
               خفيفةٌ لتُعاش، صادقةٌ لتُصلّى فيها، وقورةٌ لتدخلي بها كلَّ
               مكان.</span
             >
@@ -775,7 +852,7 @@
           <a data-page="home" style="cursor: pointer">Jilbada</a> /
           <a data-page="collection" style="cursor: pointer"
             ><span class="ltr-only">Muhajirat</span
-            ><span class="rtl-only">المهاجرات</span></a
+            ><span class="rtl-only">مهاجرات</span></a
           >
           /
           <span style="color: var(--green-deep)"
@@ -798,11 +875,11 @@
           <div class="pdp-info">
             <div class="pdp-tag">
               ◊ <span class="ltr-only">Muhajirat · Stage 01</span
-              ><span class="rtl-only">المهاجرات · المرحلة الأولى</span>
+              ><span class="rtl-only">مهاجرات · المرحلة الأولى</span>
             </div>
             <h1 class="pdp-name">
-              <span class="ltr-only">The Andalusian<br />Jilbab</span>
-              <span class="rtl-only">جلباب<br />الأندلس</span>
+              <span class="ltr-only">The Andalusian Jilbab</span>
+              <span class="rtl-only">جلباب الأندلس</span>
             </h1>
             <div class="pdp-arabic-name ltr-only">— جلباب الأندلس —</div>
             <div class="pdp-price">
@@ -812,14 +889,15 @@
               <span class="ltr-only"
                 >A two-piece jilbab inspired by the silence of Andalusian
                 gardens. Cut from breathable Egyptian linen, it falls in
-                generous, undescribed folds — the kind of garment that makes you
-                forget you're wearing it, and remember why you chose to.</span
+                generous, modest ,losse fit folds — the kind of garment that
+                makes you forget you're wearing it, and remember why you chose
+                to.</span
               >
               <span class="rtl-only"
                 >جلبابٌ من قطعتين، مستوحى من سكونِ حدائقِ الأندلس. مفصّلٌ من
                 كتّانٍ مصريٍّ قابلٍ للتنفّس، يتدلّى في طيّاتٍ سخيّةٍ غيرِ واصفة
-                — من ذلك النّوع الذي يجعلكِ تنسين أنّكِ ترتدينه، وتتذكّرين لمَ
-                اخترتِه.</span
+                لا تكشف ولا تقيد — من ذلك النّوع الذي يجعلكِ تنسين أنّكِ
+                ترتدينه، وتتذكّرين لمَ اخترتِه.</span
               >
             </p>
 
@@ -849,14 +927,16 @@
                 <span style="font-size: 1.1rem; line-height: 1">◊</span>
                 <div>
                   <span class="ltr-only"
-                    ><strong>Sizes run larger than standard.</strong> Our Medium
-                    fits like a regular XL — designed intentionally for free
-                    movement and dignified looseness.</span
-                  >
+                    >Jilbada sizes are designed exclusively to meet Islamic
+                    Sharia standards for modest roominess and do not align with
+                    European or international sizing.
+                  </span>
                   <span class="rtl-only"
-                    ><strong>مقاساتنا أوسع من المعتاد.</strong> الميديوم عندنا
-                    كالـ XL العالميّ — مُصمَّمٌ لاتّساعٍ كريمٍ وحركةٍ
-                    حرّة.</span
+                    ><strong
+                      >مقاساتنا مُصمَّمٌه خصيصا لمعاييرالشريعه الاسلامية في
+                      الوسع والراحة ولا تطابق المقاسات الاوروبية ولا
+                      العالمية.</strong
+                    ></span
                   >
                 </div>
               </div>
@@ -958,6 +1038,57 @@
                 </div>
               </div>
             </div>
+
+            <div class="pdp-care-note">
+              <div class="pdp-care-note-icon">◈</div>
+              <div class="pdp-care-note-body">
+                <div class="pdp-care-note-label">
+                  <span class="ltr-only">Important Note</span>
+                  <span class="rtl-only">ملاحظة مهمّة</span>
+                </div>
+                <p>
+                  <span class="ltr-only">Do not shorten the garment before the first wash and iron — fabric may slightly adjust in size pre-washed, but caution is advised before any alteration.</span>
+                  <span class="rtl-only">لا تقصّري الثوبَ قبل الغسيل والكيّ الأوّل — قد يتغيّر قياسُ القماش قليلاً قبل الغسيل، لكنّ الحذر واجبٌ قبل أيّ تعديل.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fabric-table-section">
+          <div class="fabric-table-header">
+            <div class="fabric-table-eyebrow">
+              <span class="ltr-only">◊ Fabric & Construction</span>
+              <span class="rtl-only">◊ الخامة والتصنيع</span>
+            </div>
+          </div>
+          <div class="fabric-table-wrap">
+            <table class="fabric-table">
+              <thead>
+                <tr>
+                  <th><span class="ltr-only">Model</span><span class="rtl-only">النموذج</span></th>
+                  <th><span class="ltr-only">Body</span><span class="rtl-only">الجزء</span></th>
+                  <th><span class="ltr-only">Care & Notes</span><span class="rtl-only">العناية والملاحظات</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="ltr-only">Egyptian Linen · 240 gsm</span><span class="rtl-only">كتّان مصريّ · ٢٤٠ جم</span></td>
+                  <td><span class="ltr-only">Main Body</span><span class="rtl-only">الجسم الرئيسي</span></td>
+                  <td><span class="ltr-only">Pre-washed ×3 before cutting. Iron on medium heat.</span><span class="rtl-only">يُغسل ثلاث مرّاتٍ قبل القصّ. كيٌّ على درجة حرارة متوسطة.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="ltr-only">Egyptian Linen · 180 gsm</span><span class="rtl-only">كتّان مصريّ · ١٨٠ جم</span></td>
+                  <td><span class="ltr-only">Ruffle Panels</span><span class="rtl-only">طبقات الكشكش</span></td>
+                  <td><span class="ltr-only">Hand wash recommended. Hang to dry in shade.</span><span class="rtl-only">يُنصح بالغسيل اليدوي. تُعلَّق لتجفّ بعيداً عن الشمس.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="ltr-only">Breathable Cotton</span><span class="rtl-only">قطن قابل للتنفّس</span></td>
+                  <td><span class="ltr-only">Inner Lining</span><span class="rtl-only">البطانة الداخلية</span></td>
+                  <td><span class="ltr-only">Machine wash cold, gentle cycle. Do not bleach.</span><span class="rtl-only">غسيل آليّ بماء بارد، دورة لطيفة. لا تستخدمي مُبيِّضات.</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
@@ -974,6 +1105,8 @@
               >
               <span class="rtl-only">يُخاطُ ببطء،<br />بأيدٍ تفهمُ غايته.</span>
             </h2>
+
+            <span class="divider"></span>
             <p>
               <span class="ltr-only"
                 >The linen is washed three times before cutting — to soften, to
@@ -987,6 +1120,7 @@
                 وبينَ إيمانكِ.</span
               >
             </p>
+            <img src="assets/ribbon.svg" alt="ribbon" />
           </div>
         </div>
       </div>
@@ -996,6 +1130,8 @@
     <section class="page" id="page-about">
       <div class="about-hero">
         <div class="about-hero-content">
+          <img class="submark-mark" src="assets/submark-cream.png" alt="" />
+
           <div class="about-eyebrow">
             <span class="line"></span>
             <span class="ltr-only">Our Story</span>
@@ -1003,11 +1139,10 @@
             <span class="line"></span>
           </div>
           <h1>
-            <span class="ltr-only"
-              >From a forgotten<br /><em>Andalusian dawn.</em></span
-            >
+            <span class="ltr-only">From a forgotten<br />Andalusian dawn.</span>
             <span class="rtl-only">من فجرٍ أندلسيٍّ<br />مَنسيّ.</span>
           </h1>
+          <span class="divider"></span>
           <p>
             <span class="ltr-only"
               >A new beginning, carried on the wind from where the fall began.
@@ -1019,6 +1154,7 @@
               جِلبادا — وحكايةُ كلِّ امرأةٍ اختارت أن تمشيَ معها.</span
             >
           </p>
+          <img class="ribbon" src="assets/ribbon.svg" alt="" />
         </div>
       </div>
 
@@ -1051,14 +1187,14 @@
                 >Jilbada is not just another fashion product. It is a response
                 to the call of the Muslim woman who seeks a fortress of modesty
                 and a banner of elegance — without sacrificing practicality. The
-                name itself bridges two worlds: from the Spanish Holgado meaning
+                name itself bridges two worlds: from the Spanish Holgada meaning
                 "loose-fitting," and the divine command of Jilbab.</span
               >
               <span class="rtl-only"
                 >جِلبادا ليست منتجَ موضةٍ آخر. إنّها استجابةٌ لنداء المرأة
                 المسلمة التي تنشدُ حصناً من الحشمة، ورايةً من الأناقة — دون
                 التّضحية بالعمليّة. الاسمُ نفسُه جسرٌ بين عالمَين: من الإسبانيّة
-                Holgado بمعنى "الفضفاض"، ومن الأمرِ الإلهيّ بالجِلباب.</span
+                Holgada بمعنى "الفضفاض"، ومن الأمرِ الإلهيّ بالجِلباب.</span
               >
             </p>
           </div>
@@ -1130,8 +1266,8 @@
             <span class="line"></span>
           </div>
           <h2>
-            <span class="ltr-only">Three stations on a single ascent.</span>
-            <span class="rtl-only">ثلاثُ محطّاتٍ في رحلةٍ واحدة.</span>
+            <span class="ltr-only">Three stages on a single ascent.</span>
+            <span class="rtl-only">ثلاثُ مراحل في رحلةٍ واحدة.</span>
           </h2>
           <p>
             <span class="ltr-only"
@@ -1139,7 +1275,7 @@
               lifelong journey — and we walk each one with you.</span
             >
             <span class="rtl-only"
-              >مجموعاتنا ليست مواسمَ موضة. إنّها محطّاتٌ في رحلةٍ هادئةٍ تستمرُّ
+              >مجموعاتنا ليست مواسمَ موضة. إنّها مراحل في رحلةٍ هادئةٍ تستمرُّ
               العمر — ونحن نمشي كلَّ واحدةٍ معكِ.</span
             >
           </p>
@@ -1149,10 +1285,9 @@
           <div class="journey-step reveal">
             <div class="text right">
               <h3>
-                <span class="ltr-only">Muhajirat</span
-                ><span class="rtl-only">المهاجرات</span>
+                <img src="assets/mohajeraat.svg" alt="" />
+                <span class="journey-span">Muhajirat</span>
               </h3>
-              <div class="ar-name ltr-only">— المهاجرات —</div>
               <p>
                 <span class="ltr-only"
                   >When the heart whispers, "the time has come." Simple, elegant
@@ -1175,10 +1310,9 @@
             <div class="center"><div class="journey-marker">02</div></div>
             <div class="text left">
               <h3>
-                <span class="ltr-only">Mathaba</span
-                ><span class="rtl-only">المثابة</span>
+                <img src="assets/mathaba.svg" alt="" />
+                <span class="journey-span">Mathaba</span>
               </h3>
-              <div class="ar-name ltr-only">— المثابة —</div>
               <p>
                 <span class="ltr-only"
                   >The sanctuary of return. Longer, wider, more intricate —
@@ -1195,10 +1329,9 @@
           <div class="journey-step reveal">
             <div class="text right">
               <h3>
-                <span class="ltr-only">Mutmainna</span
-                ><span class="rtl-only">المطمئنّة</span>
+                <img src="assets/motma2en.svg" alt="motma2en" />
+                <span class="journey-span">Mutmainna</span>
               </h3>
-              <div class="ar-name ltr-only">— المطمئنّة —</div>
               <p>
                 <span class="ltr-only"
                   >The soul at peace. Where commitment becomes a silent
@@ -1221,7 +1354,7 @@
           <div class="section-eyebrow">
             <span class="line"></span>
             <span class="ltr-only">The Slow Fashion Pledge</span>
-            <span class="rtl-only">عهدُ السلو فاشن</span>
+            <span class="rtl-only">عهدُ الموضة البطيئه </span>
             <span class="line"></span>
           </div>
           <h2 class="section-title">
@@ -1310,10 +1443,10 @@
             <span class="line"></span>
           </div>
           <h1 class="comingsoon-name">
-            <span class="ltr-only"><em>Mathaba</em></span>
-            <span class="rtl-only">المثابة</span>
+            <span class="ltr-only">Mathaba</span>
+            <span class="rtl-only">مثابة</span>
           </h1>
-          <div class="comingsoon-arabic ltr-only">— المثابة —</div>
+          <div class="comingsoon-arabic ltr-only">— مثابة —</div>
 
           <div class="comingsoon-verse">
             <div class="verse-text">
@@ -1345,7 +1478,7 @@
                 >Be the first to know when Mathaba opens its doors.</span
               >
               <span class="rtl-only"
-                >كوني أوّل مَن تعلم حين تُفتح أبواب المثابة.</span
+                >كوني أوّل مَن تعلم حين تُفتح أبواب مثابة.</span
               >
             </div>
             <div class="cs-form-row">
@@ -1364,7 +1497,7 @@
               <span class="ltr-only"
                 >A letter will be sent when she arrives. ✦</span
               >
-              <span class="rtl-only">سترسلكِ رسالةٌ حين تأتي. ✦</span>
+              <span class="rtl-only">ستصلك رساله حين تأتي. ✦</span>
             </div>
           </form>
 
@@ -1394,7 +1527,7 @@
             <span class="line"></span>
           </div>
           <h1 class="comingsoon-name">
-            <span class="ltr-only"><em>Mutmainna</em></span>
+            <span class="ltr-only">Mutmainna</span>
             <span class="rtl-only">المطمئنّة</span>
           </h1>
           <div class="comingsoon-arabic ltr-only">— المطمئنّة —</div>
@@ -1415,7 +1548,7 @@
             >
             <span class="rtl-only"
               >النّفسُ المطمئنّة. نقابٌ، قفّازان، التزامٌ كامل. حيث تتّحدُ
-              الحشمةُ الظّاهرةُ والنّورُ الباطن — ويتكلّمُ الحضورُ أعلى من
+              الحشمةُ الظّاهرةُ والنّورُ الباطن — وحضورها ابلغ من كل
               الكلام.</span
             >
           </p>
@@ -1490,7 +1623,9 @@
       <div class="cart-empty" id="cartEmpty">
         <img src="assets/submark-green.png" alt="" />
         <h4>
-          <span class="ltr-only">A quiet bag, awaiting your first piece.</span>
+          <span class="ltr-only"
+            >Your sanctuary cart - awaiting your first piece.</span
+          >
           <span class="rtl-only">حقيبةٌ هادئة، تنتظرُ قطعتكِ الأولى.</span>
         </h4>
         <button
@@ -1501,7 +1636,7 @@
           class="btn btn-ghost"
         >
           <span class="ltr-only">Discover Muhajirat →</span>
-          <span class="rtl-only">← اكتشفي المهاجرات</span>
+          <span class="rtl-only">← اكتشفي مهاجرات</span>
         </button>
       </div>
 
@@ -1581,13 +1716,13 @@
           </h3>
           <p>
             <span class="ltr-only"
-              >Our sizing runs larger than standard. Tell us about you — we'll
-              recommend the size that lets you breathe and move with
-              grace.</span
+              >Jilbada sizes are designed exclusively to meet Islamic Sharia
+              standards for modest roominess and do not align with European or
+              international sizing</span
             >
-            <span class="rtl-only"
-              >مقاساتنا أوسع من المعتاد. أخبرينا عنكِ — وسنرشّحُ لكِ المقاسَ
-              الذي يمنحُكِ راحةً وحركةً برشاقة.</span
+            <span class="rtl-only">
+              مقاسات "Jilbada" مصممه خصيصا لتوافق مع معايير الشريعه الأسلاميه في
+              الوسع والرحابة. ولا تطابق المقاسات الاوروبيه او العالميه.</span
             >
           </p>
         </div>
@@ -1667,7 +1802,10 @@
               ملهمة.</span
             >
           </p>
-          <div class="footer-tagline">دَوْماً مُلْهِمَة</div>
+          <div class="footer-tagline">
+            <img src="/assets/dawman molhemah2.svg" alt="" />
+            <span>ALWAYS INSPIRING</span>
+          </div>
         </div>
         <div class="footer-col">
           <h5>
@@ -1678,19 +1816,19 @@
             <li>
               <a data-page="collection"
                 ><span class="ltr-only">Muhajirat</span
-                ><span class="rtl-only">المهاجرات</span></a
+                ><span class="rtl-only">مهاجرات</span></a
               >
             </li>
             <li>
               <a style="opacity: 0.6"
                 ><span class="ltr-only">Mathaba (soon)</span
-                ><span class="rtl-only">المثابة (قريباً)</span></a
+                ><span class="rtl-only">مثابة (قريباً)</span></a
               >
             </li>
             <li>
               <a style="opacity: 0.6"
                 ><span class="ltr-only">Mutmainna (soon)</span
-                ><span class="rtl-only">المطمئنة (قريباً)</span></a
+                ><span class="rtl-only">مطمئنة (قريباً)</span></a
               >
             </li>
             <li>
@@ -1716,7 +1854,7 @@
             <li>
               <a
                 ><span class="ltr-only">Slow Fashion Pledge</span
-                ><span class="rtl-only">عهد السلو فاشن</span></a
+                ><span class="rtl-only">عهد الموضة بطيئه</span></a
               >
             </li>
             <li>
