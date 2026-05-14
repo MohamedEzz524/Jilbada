@@ -1026,11 +1026,11 @@ body.rtl .section-sub {
 .stage-overlay {
   position: absolute;
   inset: 0;
-  background: var(--green-deep);
+  background: rgba(0, 0, 0, 0.25);
 }
 .stage-2 .stage-overlay,
 .stage-3 .stage-overlay {
-  background: var(--green-deep);
+  background: rgba(0, 0, 0, 0.25);
 }
 .stage-content {
   position: absolute;
@@ -1146,9 +1146,9 @@ body.rtl .stage-locked-icon {
   right: auto;
   left: 2.4rem;
 }
-.stage-verse .faded {
+/* .stage-verse .faded {
   opacity: 0;
-}
+} */
 .stage-verse {
   font-family: var(--arabic-display);
   direction: rtl;
@@ -1592,6 +1592,36 @@ body.rtl .designer-credit em {
   font-style: normal;
   font-size: 0.9rem;
   letter-spacing: 0;
+}
+.collection-hadith {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem var(--gutter);
+  text-align: center;
+  background: var(--cream);
+}
+.collection-hadith-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gold-deep);
+  opacity: 0.5;
+}
+.collection-hadith-text {
+  font-family: var(--arabic-display);
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  color: var(--green-deep);
+  line-height: 1.9;
+  max-width: 680px;
+  direction: rtl;
+}
+.collection-hadith-source {
+  font-family: var(--arabic-body);
+  font-size: 0.78rem;
+  color: var(--gold-deep);
+  letter-spacing: 0.08em;
+  direction: rtl;
 }
 .filter-bar {
   padding: 1.4rem var(--gutter);
@@ -2484,6 +2514,19 @@ body.rtl .recommender-header p {
   color: var(--ink-soft);
   opacity: 0.6;
   margin-top: 0.4rem;
+}
+.field-note {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: var(--gold-deep);
+  margin-top: 0.35rem;
+  opacity: 0.85;
+}
+body.rtl .field-note {
+  font-family: var(--arabic-body);
+  font-size: 0.72rem;
+  letter-spacing: 0;
 }
 .recommend-btn {
   width: 100%;
