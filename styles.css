@@ -17,7 +17,7 @@
   --ink-soft: #2c2620;
   --serif: "new-spirit", Georgia, serif;
   --sans: "Inter", sans-serif;
-  --arabic-display: "Noto Naskh Arabic", serif;
+  --arabic-display: "adobe-naskh", "Noto Naskh Arabic", serif;
   --arabic-body: "Noto Naskh Arabic", serif;
   --max: 1440px;
   --gutter: clamp(1.5rem, 4vw, 4rem);
@@ -59,6 +59,19 @@ body.rtl h2,
 body.rtl h3,
 body.rtl h4 {
   font-family: var(--arabic-display);
+  font-weight: 500;
+  font-style: normal;
+}
+[style*="arabic-display"],
+.stage-hadith-text,
+.collection-hadith-text,
+.verse-text,
+.comingsoon-verse .verse-text {
+  font-weight: 500;
+  font-style: normal;
+}
+body.rtl * {
+  font-style: normal;
 }
 img {
   max-width: 100%;
